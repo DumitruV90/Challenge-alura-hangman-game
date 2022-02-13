@@ -15,7 +15,6 @@ body {
 #box {
     margin: 0 auto;
     height: 93vh;
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +71,7 @@ body {
     padding: 0 10px;
     display: inline-block;
     list-style: none;
-    font-size:1.6em;
+    font-size: 1.6em;
 }
 
 canvas {
@@ -157,7 +156,6 @@ footer {
     clear: both;
     text-align: center;
     color: #666;
-
 }
 
 footer a {
@@ -169,3 +167,31 @@ footer a {
 }
 
 footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
+
+@media (max-width: 575px) {
+    .box {
+        width: 95%;
+    }
+
+    #input-text {
+        height: 50px;
+        width: 85%;
+    }
+
+    #lives, #clue {
+        font-size: 23px;
+    }
+
+    #my-word li {
+        padding: 0 5px;
+        font-size: 1.4em;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+
+   
+
+}
