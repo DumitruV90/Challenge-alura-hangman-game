@@ -169,12 +169,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
 @media (max-width: 575px) {
     .box {
-        width: 95%;
+        width: 90%;
     }
 
     #input-text {
         height: 50px;
-        width: 85%;
+        width: 80%;
     }
 
     #lives, #clue {
