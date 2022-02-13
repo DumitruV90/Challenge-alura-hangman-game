@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+}
+
+#box {
+    margin: 0 auto;
+    height: 93vh;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {  
+    margin: 5px auto;
+}
+
+.bar {
+    margin: 20px auto;
+    width: 400px;
+    border-radius: 30px;
+    border:1px solid #dcdcdc;
+}
+  
+.bar:hover {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+  
+.bar:focus-within {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline: none;
+}
+
+#input-text {
+    margin: auto 25px;
+    height: 43px;
+    width: 330px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+
+#play {
+    display: none;
+}
+
+#lives, #clue {
+    margin: 10px auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 25px;
+}
+
+#my-word {
+    margin-bottom: 10px;
+    padding: 0;
+    display: block;
+}
+  
+#my-word li {
+    position: relative;
+    margin: 0;
+    padding: 0 10px;
+    display: inline-block;
+    list-style: none;
+    font-size:1.6em;
+}
+
+canvas {
+    margin: 13px auto;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 15px #dcdcdc;
+}
+
+button {
+    background-color: white;
+    padding: 10px 20px;
+    margin: 5px 5px;
+    color: #3388BB;
+    font-size: 15px;
+    border: 2px solid #3388BB;
+    border-radius: 7px; 
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: #3388BB;
+    padding: 10px 20px;
+    color: white;
+}
+
+#keyboard {
+    margin: 10px auto;
+    text-align: center;
+    width: 400px;
+    height: 155px;
+}
+
+#alfabeto {
+    margin: 5px 5px 5px 50px;
+    padding: 0;
+}
+
+#alfabeto::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+#alfabeto li {
+    margin: 0 10px 10px 0;
+    float: left;
+    width: 10%;
+    height: 10%;
+    list-style: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 18px;
+    padding: 4px;
+    background-color: #3388BB;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+      
+}
+
+#alfabeto li:hover {
+    background-color: white;
+    color: #3388BB;
+}
+
+.active {
+    opacity: 0.3;
+    cursor: default;
+}
+
+#game-options {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+footer {
+    position: absolute;
+    margin-bottom: 5px;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    clear: both;
+    text-align: center;
+    color: #666;
+
+}
+
+footer a {
+    font: Verdana, Arial, Helvetica, sans-serif;
+    color: #707070;
+    letter-spacing: -1px;
+    text-decoration: underline;
+    background-color: inherit;
+}
+
+footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}

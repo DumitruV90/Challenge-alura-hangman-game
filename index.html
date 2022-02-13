@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Juego del ahorcado</title>
+</head>
+
+<body>
+    <div id="box">
+        <div id="start">
+            <div class="title">
+                <img src="title.jpeg" alt="Game logo">
+            </div>
+            <button type="button" id="iniciar-juego">Jugar</button>
+            <div class="bar">
+                <input id="input-text" type="text" name="entrada-texto" placeholder="Escribe una nueva palabra"
+                    autocomplete="off" autofocus>
+            </div>
+            <button type="button" id="add-Btn">Agregar</button>
+        </div>
+
+        <div id="play">
+            <div>
+                <p id="lives"></p>
+                <div id="underscore"></div>
+                <p id="clue">Pista:</p>
+                <canvas id="screen"></canvas>
+            </div>
+
+            <div id="keyboard"></div>
+            <div id="game-options">
+                <button type="button" id="home">Inicio</button>
+                <button type="button" id="retry">Reintentar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Realizado por <a href="https://github.com/DumitruV90" target="blank">Dumitru Vasilescu Quintero</a>
+        para <a href="https://www.aluracursos.com" target="blank">Alura Latam</a>.
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="canvas.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" integrity="sha384-RIQuldGV8mnjGdob13cay/K1AJa+LR7VKHqSXrrB5DPGryn4pMUXRLh92Ev8KlGF" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
