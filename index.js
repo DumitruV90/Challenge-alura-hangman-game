@@ -145,7 +145,7 @@ function pista() {
     let pistas = ["una empresa icónica de Cupertino, California",
         "un equipo del fútbol inglés muy reconocido ",
         "una saga de videojuegos muy famosa",
-        "un mágico mundo élfico",
+        "un valle de la tierra media",
         "antagonista de la saga de Harry Potter",
         "es la casa de un famoso fontanero",
         "apellido de un legendario inventor",
