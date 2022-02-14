@@ -151,7 +151,7 @@ function pista() {
         "apellido de un legendario inventor",
         "ex integrante de los Beatles",
         "ingeniero de software finlandés",
-        "telescopio espacial lanzado recientemente"];
+        "telescopio lanzado recientemente al espacio"];
     // Selección de los índices de los arreglos de las palabras y pistas. El primer elemento del arreglo pistas debe coincidir con el primer elemento del arreglo palabras
     let indicePalabras = arregloPalabras.indexOf(palabraSeleccionada);
     let indicePistas = pistas[indicePalabras];
@@ -176,7 +176,7 @@ inputText.addEventListener("keypress", function (event) {
 });
 
 addBtn.addEventListener("click", function () {
-    // A la nueva palabra agregada por el usuario se le retiran los acentos, es covertida a mayúsculas y se reemplazan los espacios en blanco por un guión 
+    // A la nueva palabra agregada por el jugador se le retiran los acentos, es covertida a mayúsculas y se reemplazan los espacios en blanco por un guión 
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
     // Únicamente son válidas las letras del alfabeto 
@@ -202,7 +202,7 @@ reintentar.addEventListener("click", function () {
     acierto.parentNode.removeChild(acierto);
     letras.parentNode.removeChild(letras);
     context.clearRect(0, 0, 300, 300);
-    // Al reiniciar el juego, la pista y el teclado reaparecen a la pantalla.
+    // Al reiniciar el juego, la pista y el teclado reaparecen en la pantalla.
     clue.style.display = "block";
     myKeyboard.style.display = "block";
     startGame.click();
