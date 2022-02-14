@@ -57,14 +57,15 @@ startGame.addEventListener("click", function () {
 });
 
 function jugar() {
-    // Selección de la palabra aleatoria
-    palabraSeleccionada = arregloPalabras[Math.floor(Math.random() * arregloPalabras.length)]
-    palabraSeleccionada = palabraSeleccionada.replace(/\s/g, "-");
 
     arregloIntentos = [];
     vidas = 10;
     contador = 0;
     espacio = 0;
+
+    // Selección de la palabra aleatoria
+    palabraSeleccionada = arregloPalabras[Math.floor(Math.random() * arregloPalabras.length)];
+    palabraSeleccionada = palabraSeleccionada.replace(/\s/g, "-");
 
     resultado();
     comentarios();
@@ -143,7 +144,7 @@ function pista() {
     let mostrarPista = document.getElementById("clue");
 
     let pistas = ["una empresa icónica de Cupertino, California",
-        "un equipo del fútbol inglés muy reconocido ",
+        "es un equipo del fútbol inglés muy reconocido ",
         "una saga de videojuegos muy famosa",
         "un valle de la tierra media",
         "antagonista de la saga de Harry Potter",
