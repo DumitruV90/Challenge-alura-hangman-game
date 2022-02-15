@@ -191,3 +191,21 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
 }
+
+@media only screen and (max-width: 350px) {
+    body {
+        min-height: 100vh;
+    }
+
+    .bar {
+        width: 310px;
+    }
+
+    #lives, #clue {
+        font-size: 21px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
