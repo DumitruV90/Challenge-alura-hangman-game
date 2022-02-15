@@ -1,6 +1,7 @@
 const startGame = document.getElementById("iniciar-juego");
 const inputText = document.getElementById("input-text");
 const addBtn = document.getElementById("add-Btn");
+const mostrarVidas = document.getElementById("lives");
 const clue = document.getElementById("clue");
 const myKeyboard = document.getElementById("keyboard");
 const home = document.getElementById("home");
@@ -17,6 +18,17 @@ let arregloPalabras = ["APPLE",
     "LINUS-TORVALDS",
     "JAMES-WEBB"];
 
+let pistas = ["una empresa icónica de Cupertino, California",
+    "es un equipo del fútbol inglés muy reconocido ",
+    "una saga de videojuegos muy famosa",
+    "un valle de la tierra media",
+    "antagonista de la saga de Harry Potter",
+    "es la casa de un famoso fontanero",
+    "apellido de un legendario inventor",
+    "ex integrante de los Beatles",
+    "ingeniero de software finlandés",
+    "telescopio lanzado recientemente al espacio"];
+
 const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
     'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
     'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -24,6 +36,7 @@ const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
 // Inicialización de variables 
 let letras;
 let lista;
+let numeroAleatorio;
 let palabraSeleccionada;
 let intento;
 let arregloIntentos;
@@ -32,11 +45,12 @@ let contador;
 let espacio;
 let acierto;
 
-
 // Estructura del teclado en la pantalla
 startGame.addEventListener("click", function () {
+
     // La división start desaparece de la pantalla
     document.getElementById("start").style.display = "none";
+
     // La división play pasa de tener la propiedad 'display: none' (ver hoja de estilos CSS) a tener la propiedad 'display: block'. Es decir, ya se puede ver en la pantalla
     document.getElementById("play").style.display = "block";
 
@@ -57,25 +71,35 @@ startGame.addEventListener("click", function () {
 });
 
 function jugar() {
-
     arregloIntentos = [];
     vidas = 10;
     contador = 0;
     espacio = 0;
+    numeroAleatorio = Math.floor(Math.random() * arregloPalabras.length);
 
-    // Selección de la palabra aleatoria
-    palabraSeleccionada = arregloPalabras[Math.floor(Math.random() * arregloPalabras.length)];
-    palabraSeleccionada = palabraSeleccionada.replace(/\s/g, "-");
+    // La palabra es seleccionada aleatoriamente dentro del arregloPalabras y los espacios son reemplazados con un guión
+    palabraSeleccionada = arregloPalabras[numeroAleatorio].replace(/\s/g, "-");
 
+    // Para evitar repeticiones de palabras seleccionadas, por cada reintento en el juego un elemento del arregloPalabras es eliminado de acuerdo al número aleatorio
+    arregloPalabras.splice(numeroAleatorio, 1);
+    console.log(arregloPalabras);
+    console.log()
+    
     resultado();
     comentarios();
     canvas();
+
+    if (arregloPalabras.length === 0) {
+        reintentar.disabled = true;
+        swal("Oops!", "El banco de palabras está agotado. Es tu último turno :(", "error");
+    }
 }
 
 function revisar() {
     lista.onclick = function () {
         let shot = this.innerHTML;
         this.setAttribute("class", "active");
+
         // Las letras ya seleccionadas dejarán de tener incidencia en la cantidad de vidas del jugador 
         this.onclick = null;
 
@@ -86,6 +110,7 @@ function revisar() {
             }
         }
         let check = palabraSeleccionada.indexOf(shot);
+
         // Si no hay coincidencias (-1) entre la letra seleccionada por el usuario y alguna letra de la palabra seleccionada, entonces se resta una vida 
         if (check === -1) {
             vidas -= 1;
@@ -106,6 +131,7 @@ function resultado() {
         acierto.setAttribute("id", "my-word");
         intento = document.createElement("li");
         intento.setAttribute("class", "intento");
+
         // Verificación de la existencia de espacios en la palabra seleccionada
         if (palabraSeleccionada[i] === "-") {
             intento.innerHTML = "-";
@@ -121,8 +147,6 @@ function resultado() {
 }
 
 function comentarios() {
-    let mostrarVidas = document.getElementById("lives");
-
     mostrarVidas.innerHTML = `Tienes ${vidas} vidas`;
     if (vidas < 1) {
         mostrarVidas.innerHTML = "Perdiste!, vuelve a intentarlo";
@@ -140,30 +164,23 @@ function comentarios() {
     }
 }
 
+
+
 function pista() {
     let mostrarPista = document.getElementById("clue");
-
-    let pistas = ["una empresa icónica de Cupertino, California",
-        "es un equipo del fútbol inglés muy reconocido ",
-        "una saga de videojuegos muy famosa",
-        "un valle de la tierra media",
-        "antagonista de la saga de Harry Potter",
-        "es la casa de un famoso fontanero",
-        "apellido de un legendario inventor",
-        "ex integrante de los Beatles",
-        "ingeniero de software finlandés",
-        "telescopio lanzado recientemente al espacio"];
-    // Selección de los índices de los arreglos de las palabras y pistas. El primer elemento del arreglo pistas debe coincidir con el primer elemento del arreglo palabras
-    let indicePalabras = arregloPalabras.indexOf(palabraSeleccionada);
-    let indicePistas = pistas[indicePalabras];
-
+    
+    // La pista es seleccionada de acuerdo al valor del número aleatorio. La posición o índice de cada pista y elemento del arregloPalabras deben coincidir. 
+    let indicePistas = pistas[numeroAleatorio];
+    
     // Si el índice de pistas es indefinido es porque la palabra seleccionada corresponde a la ingresada por el usuario
     if (indicePistas === undefined) {
         mostrarPista.innerHTML = `Pista: Ya no es un secreto para ti`;
     } else {
         mostrarPista.innerHTML = `Pista: ${indicePistas}`;
-    }
+    } 
 
+    // Para evitar repeticiones de pistas seleccionadas, por cada reintento en el juego un elemento del arreglo pistas es eliminado de acuerdo al número aleatorio
+    pistas.splice(numeroAleatorio, 1);
 }
 
 inputText.addEventListener("keypress", function (event) {
@@ -177,6 +194,7 @@ inputText.addEventListener("keypress", function (event) {
 });
 
 addBtn.addEventListener("click", function () {
+
     // A la nueva palabra agregada por el jugador se le retiran los acentos, es covertida a mayúsculas y se reemplazan los espacios en blanco por un guión 
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
@@ -203,6 +221,7 @@ reintentar.addEventListener("click", function () {
     acierto.parentNode.removeChild(acierto);
     letras.parentNode.removeChild(letras);
     context.clearRect(0, 0, 300, 300);
+
     // Al reiniciar el juego, la pista y el teclado reaparecen en la pantalla.
     clue.style.display = "block";
     myKeyboard.style.display = "block";
