@@ -91,7 +91,7 @@ function jugar() {
 
     if (arregloPalabras.length === 0) {
         reintentar.disabled = true;
-        swal("Oops!", "El banco de palabras está agotado. Es tu último turno :(", "error");
+        swal("Oops!", "No hay más palabras disponibles. Es tu último turno :(", "error");
     }
 }
 

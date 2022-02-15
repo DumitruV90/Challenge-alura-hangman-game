@@ -201,12 +201,9 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         width: 310px;
     }
 
-    #lives {
-        font-size: 20px;
-    }
-
-    #clue {
-        font-size: 18px;
+    #lives, #clue {
+        width: 300px;
+        font-size: 21px;
     }
 
     canvas {
