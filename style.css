@@ -194,15 +194,15 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
 @media only screen and (max-width: 350px) {
     #box {
-        height: 110vh;
+        height: 120vh;
     }
 
     .bar {
-        width: 310px;
+        width: 95vw;
     }
 
     #lives, #clue {
-        width: 300px;
+        width: 95vw;
         font-size: 21px;
     }
 
