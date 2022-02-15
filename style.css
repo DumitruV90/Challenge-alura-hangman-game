@@ -197,12 +197,16 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         min-height: 100vh;
     }
 
+    #box {
+        height: 100vh;
+    }
+
     .bar {
         width: 310px;
     }
 
     #lives, #clue {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     footer {
