@@ -193,12 +193,8 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 }
 
 @media only screen and (max-width: 350px) {
-    body {
-        min-height: 100vh;
-    }
-
     #box {
-        height: 100vh;
+        height: 130vh;
     }
 
     .bar {
@@ -210,6 +206,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
     footer {
+        margin-top: 10vh;
         font-size: 13px;
     }
 }

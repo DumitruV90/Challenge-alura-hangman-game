@@ -195,7 +195,7 @@ inputText.addEventListener("keypress", function (event) {
 
 addBtn.addEventListener("click", function () {
 
-    // A la nueva palabra agregada por el jugador se le retiran los acentos, es covertida a mayúsculas y se reemplazan los espacios en blanco por un guión 
+    // A la nueva palabra agregada por el jugador se le retiran los acentos y es covertida a mayúsculas
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
     // Únicamente son válidas las letras del alfabeto 
@@ -204,7 +204,7 @@ addBtn.addEventListener("click", function () {
     if (!entradaTexto.match(regEx)) {
         swal("Oops!", "Recuerda escribir únicamente letras del alfabeto", "error");
     } else {
-        // La nueva palabra ingresada por el usuario es validada y agregada al arregloPalabras
+        // Los espacios en blanco de la nueva palabra ingresada son reeemplazados por un guión
         let updateText = entradaTexto.replaceAll(' ', '-');
         arregloPalabras.push(updateText);
         inputText.value = "";
