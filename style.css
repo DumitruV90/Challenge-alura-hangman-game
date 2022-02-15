@@ -205,8 +205,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 20px;
     }
 
+    canvas {
+        width: 300px;
+    }
+
     footer {
-        margin-top: 10vh;
+        margin-top: 30vh;
         font-size: 13px;
     }
 }
