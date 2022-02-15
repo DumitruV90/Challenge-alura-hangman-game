@@ -1,7 +1,6 @@
 const startGame = document.getElementById("iniciar-juego");
 const inputText = document.getElementById("input-text");
 const addBtn = document.getElementById("add-Btn");
-const mostrarVidas = document.getElementById("lives");
 const clue = document.getElementById("clue");
 const myKeyboard = document.getElementById("keyboard");
 const home = document.getElementById("home");
@@ -82,8 +81,7 @@ function jugar() {
 
     // Para evitar repeticiones de palabras seleccionadas, por cada reintento en el juego un elemento del arregloPalabras es eliminado de acuerdo al número aleatorio
     arregloPalabras.splice(numeroAleatorio, 1);
-    console.log(arregloPalabras);
-    console.log()
+    
     
     resultado();
     comentarios();
@@ -147,6 +145,7 @@ function resultado() {
 }
 
 function comentarios() {
+    let mostrarVidas = document.getElementById("lives");
     mostrarVidas.innerHTML = `Tienes ${vidas} vidas`;
     if (vidas < 1) {
         mostrarVidas.innerHTML = "Perdiste!, vuelve a intentarlo";
