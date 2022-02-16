@@ -47,7 +47,7 @@ let acierto;
 
 // Estructura del teclado en la pantalla
 startGame.addEventListener("click", function () {
-
+    
     // La división start desaparece de la pantalla
     document.getElementById("start").style.display = "none";
 
@@ -168,7 +168,7 @@ function comentarios() {
 
 function pista() {
     let mostrarPista = document.getElementById("clue");
-    
+
     // La pista es seleccionada de acuerdo al valor del número aleatorio. La posición o índice de cada pista y elemento del arregloPalabras deben coincidir. 
     let indicePistas = pistas[numeroAleatorio];
     
@@ -212,8 +212,6 @@ addBtn.addEventListener("click", function () {
         arregloPalabras.push(updateText);
         inputText.value = "";
     }
-    console.log(arregloPalabras);
-
 });
 
 home.addEventListener("click", function () {
