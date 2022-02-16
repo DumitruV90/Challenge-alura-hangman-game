@@ -28,16 +28,8 @@ body {
     margin: 20px auto;
     width: 400px;
     border-radius: 30px;
-    border:1px solid #dcdcdc;
-}
-  
-.bar:hover {
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-}
-  
-.bar:focus-within {
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-    outline: none;
+    border: 1px solid #dcdcdc;
+    box-shadow: 2px 5px 15px #dcdcdc;
 }
 
 #input-text {
@@ -136,7 +128,7 @@ button:hover, button:focus {
     color: #3388BB;
 }
 
-.active {
+.defuse {
     opacity: 0.3;
     cursor: default;
 }

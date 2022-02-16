@@ -1,10 +1,11 @@
 const startGame = document.getElementById("iniciar-juego");
 const inputText = document.getElementById("input-text");
 const addBtn = document.getElementById("add-Btn");
+const underscore = document.getElementById("underscore");
 const clue = document.getElementById("clue");
 const myKeyboard = document.getElementById("keyboard");
 const home = document.getElementById("home");
-const reintentar = document.getElementById("retry");
+const playAgain = document.getElementById("retry");
 
 let arregloPalabras = ["APPLE",
     "LIVERPOOL",
@@ -88,7 +89,7 @@ function jugar() {
     canvas();
 
     if (arregloPalabras.length === 0) {
-        reintentar.disabled = true;
+        playAgain.disabled = true;
         swal("Oops!", "No hay más palabras disponibles. Es tu último turno :(", "error");
     }
 }
@@ -96,7 +97,7 @@ function jugar() {
 function revisar() {
     lista.onclick = function () {
         let shot = this.innerHTML;
-        this.setAttribute("class", "active");
+        this.setAttribute("class", "defuse");
 
         // Las letras ya seleccionadas dejarán de tener incidencia en la cantidad de vidas del jugador 
         this.onclick = null;
@@ -122,7 +123,6 @@ function revisar() {
 
 // Estructura y visualización de la palabra seleccionada en la pantalla
 function resultado() {
-    let guionBajo = document.getElementById("underscore");
     acierto = document.createElement("ul");
 
     for (let i = 0; i < palabraSeleccionada.length; i++) {
@@ -139,7 +139,7 @@ function resultado() {
         }
 
         arregloIntentos.push(intento);
-        guionBajo.appendChild(acierto);
+        underscore.appendChild(acierto);
         acierto.appendChild(intento);
     }
 }
@@ -148,16 +148,18 @@ function comentarios() {
     let mostrarVidas = document.getElementById("lives");
     mostrarVidas.innerHTML = `Tienes ${vidas} vidas`;
     if (vidas < 1) {
-        mostrarVidas.innerHTML = "Perdiste!, vuelve a intentarlo";
-        // Al perder, la pista y el teclado desaparecen de la pantalla
+        mostrarVidas.innerHTML = `Perdiste!, vuelve a intentarlo. <br> La palabra secreta era: ${palabraSeleccionada}`;
+        // Si el jugador pierde desaparecen de la pantalla la pista, la sección de los guiones bajos, y el teclado
         clue.style.display = "none";
+        underscore.style.display = "none";
         myKeyboard.style.display = "none";
     }
     for (let i = 0; i < arregloIntentos.length; i++) {
         if (contador + espacio === arregloIntentos.length) {
             mostrarVidas.innerHTML = "Genial, ganaste!";
-            // Al ganar, la pista y el teclado también desaparecen de la pantalla
+            // // Si el jugador gana también desaparecen de la pantalla la pista, la sección de los guiones bajos, y el teclado
             clue.style.display = "none";
+            underscore.style.display = "none";
             myKeyboard.style.display = "none";
         }
     }
@@ -215,14 +217,15 @@ home.addEventListener("click", function () {
     location.reload();
 });
 
-reintentar.addEventListener("click", function () {
+playAgain.addEventListener("click", function () {
     this.blur();
     acierto.parentNode.removeChild(acierto);
     letras.parentNode.removeChild(letras);
     context.clearRect(0, 0, 300, 300);
 
-    // Al reiniciar el juego, la pista y el teclado reaparecen en la pantalla.
+    // Si el jugador decide volver a jugar reaparecen en la pantalla la pista, la sección de los guiones bajos, y el teclado
     clue.style.display = "block";
+    underscore.style.display = "block";
     myKeyboard.style.display = "block";
     startGame.click();
 });
