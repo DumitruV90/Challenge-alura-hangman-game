@@ -148,7 +148,7 @@ function comentarios() {
     let mostrarVidas = document.getElementById("lives");
     mostrarVidas.innerHTML = `Tienes ${vidas} vidas`;
     if (vidas < 1) {
-        mostrarVidas.innerHTML = `Perdiste! :( <br> La palabra secreta era: ${palabraSeleccionada}`;
+        mostrarVidas.innerHTML = `Perdiste! :( <br> La palabra secreta era ${palabraSeleccionada}`;
         // Si el jugador pierde desaparecen de la pantalla la pista, la sección de los guiones bajos, y el teclado
         clue.style.display = "none";
         underscore.style.display = "none";
