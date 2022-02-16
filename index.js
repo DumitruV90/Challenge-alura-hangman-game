@@ -157,9 +157,8 @@ function comentarios() {
     for (let i = 0; i < arregloIntentos.length; i++) {
         if (contador + espacio === arregloIntentos.length) {
             mostrarVidas.innerHTML = "Genial, ganaste!";
-            // // Si el jugador gana también desaparecen de la pantalla la pista, la sección de los guiones bajos, y el teclado
+            // // Si el jugador gana también desaparecen de la pantalla la pista y el teclado
             clue.style.display = "none";
-            underscore.style.display = "none";
             myKeyboard.style.display = "none";
         }
     }
@@ -204,12 +203,16 @@ addBtn.addEventListener("click", function () {
 
     if (!entradaTexto.match(regEx)) {
         swal("Oops!", "Recuerda escribir únicamente letras del alfabeto", "error");
+    } 
+    else if (arregloPalabras.includes(entradaTexto)) {
+        swal("Oops!", "La palabra que escribiste estaría repetida. Selecciona otra", "error");
     } else {
-        // Los espacios en blanco de la nueva palabra ingresada son reeemplazados por un guión
+        // Los espacios en blanco de la nueva palabra son reeemplazados por un guión
         let updateText = entradaTexto.replaceAll(' ', '-');
         arregloPalabras.push(updateText);
         inputText.value = "";
     }
+    console.log(arregloPalabras);
 
 });
 
