@@ -23,8 +23,8 @@ function dibujar(x, y, lineX, lineY) {
     context.stroke(); 
 }
 
-/* Arreglo de funciones cuyos elementos serán llamados en la función animación dependiendo del número de vidas del jugador. 
-Por ejemplo, 9 vidas equivaldría a la posición 9 del arreglo (primeraLinea) y se dibujaría en el canvas la primera línea horizontal del juego.
+/* Los elementos del arregloDibujos serán llamados en la función animación dependiendo del número de vidas del jugador. 
+Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) y se dibujaría en el canvas la primera línea horizontal del juego.
 ...Y así sucesivamente 
 */
 
