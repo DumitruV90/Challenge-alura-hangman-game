@@ -60,7 +60,7 @@ startGame.addEventListener("click", function () {
         // Las letras del alfabeto o el teclado virtual son simplemente una lista de ítems (li) contenida en una lista no ordenada (ul)
         letras.id = "alfabeto";
         lista = document.createElement("li");
-        lista.id = "letra";
+        lista.class = "letra";
         lista.innerHTML = alfabeto[i];
         revisar();
         myKeyboard.appendChild(letras);
