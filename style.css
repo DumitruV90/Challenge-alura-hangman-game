@@ -29,7 +29,15 @@ body {
     width: 400px;
     border-radius: 30px;
     border: 1px solid #dcdcdc;
+}
+
+.bar:hover {
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
+  
+.bar:focus-within {
     box-shadow: 2px 5px 15px #dcdcdc;
+    outline: none;
 }
 
 #input-text {

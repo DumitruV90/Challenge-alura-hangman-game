@@ -13,7 +13,7 @@ function canvas() {
 
 function dibujarCirculo() {
     context.beginPath();
-    context.arc(150, 33, 13, 0, Math.PI*2, true);
+    context.arc(150, 34, 13, 0, Math.PI * 2);
     context.stroke();
 }
 
@@ -31,9 +31,9 @@ Por ejemplo, 9 vidas equivaldría a la posición 9 del arreglo (primeraLinea) y 
 const arregloDibujos = [
     piernaDerecha = () => dibujar(150, 90, 127, 110),
     piernaIzquierda = () => dibujar(150, 90, 173, 110),
-    brazoDerecho = () => dibujar(150, 50, 130, 70),
-    brazoIzquierdo = () => dibujar(150, 50, 170, 70),
-    cuerpo = () => dibujar(150, 45, 150, 90),
+    brazoDerecho = () => dibujar(150, 52, 130, 70),
+    brazoIzquierdo = () => dibujar(150, 52, 170, 70),
+    cuerpo = () => dibujar(150, 47, 150, 90),
     dibujarCirculo,
     cuartaLinea = () => dibujar(150, 0, 150, 20),
     terceraLinea = () => dibujar(60, 0, 150, 0),
