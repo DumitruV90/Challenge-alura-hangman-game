@@ -24,7 +24,7 @@ function dibujar(x, y, lineX, lineY) {
 }
 
 /* Los elementos del arregloDibujos son llamados en la función animación dependiendo del número de vidas del jugador. 
-Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) y se dibujaría en el canvas la primera línea horizontal del juego.
+Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) que es dibujada en el canvas como la primera línea horizontal
 ...Y así sucesivamente 
 */
 
