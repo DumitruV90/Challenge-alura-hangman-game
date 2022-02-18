@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: 93vh;
+    height: 97vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +147,7 @@ button:hover, button:focus {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     margin-bottom: 5px;
     bottom: 0;
     width: 100%;
@@ -194,11 +194,6 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 @media only screen and (orientation: landscape) {
     body {
       min-height: 100vh;
-    }
-
-    footer {
-        position: relative;
-        font-size: 14px;
     }
   }
 
