@@ -195,17 +195,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         height: 125vh;
     }
 
-    .bar, canvas {
+    #play {
         width: 90vw;
     }
 
     #lives, #clue {
-        width: 95vw;
         font-size: 21px;
-    }
-
-    #keyboard {
-        width: 97vw;
     }
 
     footer {
