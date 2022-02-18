@@ -195,7 +195,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         height: 125vh;
     }
 
-    .bar, canvas, #keyboard {
+    .bar, canvas {
         width: 90vw;
     }
 
@@ -204,19 +204,23 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 21px;
     }
 
+    #keyboard {
+        width: 97vw;
+    }
+
     footer {
         position: relative;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-height: 600px) {
     #box {
-        height: 125vh;
+        height: 140vh;
     }
 
     footer {
         position: relative;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
