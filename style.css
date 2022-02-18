@@ -6,18 +6,15 @@
     box-sizing: border-box;
 }
 
-html,
 body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
-    height: auto!important;
-    min-height: 100vh;
 }
 
 #box {
-    margin: 20px auto;
-    height: 93vh;
+    margin: 10px auto;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,6 +198,10 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
     .bar {
         width: 90vw;
+    }
+
+    .bar:hover, .bar:focus-within {
+        box-shadow: none;
     }
 
     #lives, #clue {
