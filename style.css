@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
+    min-height: 100vh;
 }
 
 #box {
@@ -191,12 +192,6 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media only screen and (orientation: landscape) {
-    body {
-      min-height: 100vh;
-    }
-  }
-
 @media only screen and (max-width: 350px) {
     #box {
         height: 125vh;
@@ -216,7 +211,6 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
     footer {
-        position: relative;
         font-size: 13px;
     }
 }
