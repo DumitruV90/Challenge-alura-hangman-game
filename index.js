@@ -164,8 +164,6 @@ function comentarios() {
     }
 }
 
-
-
 function pista() {
     let mostrarPista = document.getElementById("clue");
 
