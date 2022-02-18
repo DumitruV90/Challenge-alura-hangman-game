@@ -6,10 +6,12 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
+    height: auto!important;
     min-height: 100vh;
 }
 
