@@ -170,7 +170,7 @@ footer a {
 
 footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
     .bar {
         width: 350px;
     }
