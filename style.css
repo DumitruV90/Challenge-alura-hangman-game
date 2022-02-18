@@ -166,7 +166,7 @@ footer a {
 
 footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .bar {
         width: 350px;
     }
@@ -195,12 +195,16 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         height: 125vh;
     }
 
-    #play {
+    .bar, canvas {
         width: 90vw;
     }
 
     #lives, #clue {
         font-size: 21px;
+    }
+
+    #keyboard {
+        width: 98vw;
     }
 
     footer {
@@ -211,7 +215,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
 @media only screen and (max-height: 600px) {
     #box {
-        height: 140vh;
+        height: 150vh;
     }
 
     footer {
