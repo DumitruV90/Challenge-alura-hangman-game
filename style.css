@@ -7,14 +7,16 @@
 }
 
 body {
+    position: relative;
     margin: 0 auto;
     background-color: white;
     text-align: center;
+    min-height: 100vh;
 }
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 94vh, 94vh);
+    height: clamp(630px, 95vh, 95vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,8 +148,8 @@ button:hover, button:focus {
 }
 
 footer {
-    position: relative;
-    margin-top: 30px;
+    position: absolute;
+    margin-top: 25px;
     width: 100%;
     font-size: 15px;
     text-align: center;
@@ -165,9 +167,6 @@ footer a {
 footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
 
 @media (max-width: 700px) {
-    #box {
-        height: clamp(630px, 87vh, 87vh);
-    }
     .bar {
         width: 350px;
     }
