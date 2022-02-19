@@ -1,11 +1,11 @@
-const startGame = document.getElementById("iniciar-juego");
-const inputText = document.getElementById("input-text");
-const addBtn = document.getElementById("add-Btn");
-const underscore = document.getElementById("underscore");
-const clue = document.getElementById("clue");
-const myKeyboard = document.getElementById("keyboard");
-const home = document.getElementById("home");
-const playAgain = document.getElementById("retry");
+const startGame = document.getElementById("iniciar-juego"),
+inputText = document.getElementById("input-text"),
+addBtn = document.getElementById("add-Btn"),
+underscore = document.getElementById("underscore"),
+clue = document.getElementById("clue"),
+myKeyboard = document.getElementById("keyboard"),
+home = document.getElementById("home"),
+playAgain = document.getElementById("retry");
 
 let arregloPalabras = ["APPLE",
     "LIVERPOOL",
@@ -34,16 +34,16 @@ const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
     'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 // Inicialización de variables 
-let letras;
-let lista;
-let numeroAleatorio;
-let palabraSeleccionada;
-let intento;
-let arregloIntentos;
-let vidas;
-let contador;
-let espacio;
-let acierto;
+let letras,
+lista,
+numeroAleatorio,
+palabraSeleccionada,
+intento,
+arregloIntentos,
+vidas,
+contador,
+espacio,
+acierto;
 
 // Estructura del teclado en la pantalla
 startGame.addEventListener("click", function () {
@@ -86,7 +86,7 @@ function jugar() {
     
     resultado();
     comentarios();
-    canvas();
+    render();
 
     if (arregloPalabras.length === 0) {
         playAgain.disabled = true;
@@ -220,7 +220,7 @@ playAgain.addEventListener("click", function () {
     this.blur();
     acierto.parentNode.removeChild(acierto);
     letras.parentNode.removeChild(letras);
-    context.clearRect(0, 0, 300, 300);
+    context.clearRect(0, 0, 300, 150);
 
     // Si el jugador decide volver a jugar reaparecen en la pantalla la pista, la sección de los guiones bajos, y el teclado
     clue.style.display = "block";

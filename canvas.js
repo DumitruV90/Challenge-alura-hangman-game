@@ -1,11 +1,11 @@
-const screen = document.getElementById("screen");
-const context = screen.getContext('2d');
+const canvas = document.getElementById("screen");
+const context = canvas.getContext('2d');
 
 const animacion = () => {
     arregloDibujos[vidas]();
 }
 
-function canvas() {
+function render() {
     context.beginPath();
     context.strokeStyle = "black";
     context.lineWidth = 2;
