@@ -13,8 +13,8 @@ body {
 }
 
 #box {
-    margin: 0 auto;
-    height: 93vh;
+    margin: 24px auto;
+    height: clamp(630px, 93vh, 93vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,12 +146,9 @@ button:hover, button:focus {
 }
 
 footer {
-    position: absolute;
-    margin-bottom: 5px;
-    bottom: 0;
+    position: relative;
     width: 100%;
     font-size: 15px;
-    clear: both;
     text-align: center;
     color: #666;
 }
@@ -191,10 +188,6 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 }
 
 @media only screen and (max-width: 350px) {
-    #box {
-        height: 125vh;
-    }
-
     .bar, canvas {
         width: 90vw;
     }
@@ -203,16 +196,11 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 21px;
     }
 
-    #keyboard {
-        width: 98vw;
-    }
-
     footer {
-        position: relative;
         font-size: 12px;
     }
 }
-
+/*
 @media only screen and (max-height: 600px) {
     #box {
         height: 170vh;
@@ -223,3 +211,4 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 13px;
     }
 }
+*/
