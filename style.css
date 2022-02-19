@@ -11,7 +11,6 @@ body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
-    min-height: 100vh;
 }
 
 #box {
@@ -149,7 +148,7 @@ button:hover, button:focus {
 
 footer {
     position: absolute;
-    margin-top: 25px;
+    margin-top: 20px;
     width: 100%;
     font-size: 15px;
     text-align: center;
