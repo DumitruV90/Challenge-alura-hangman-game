@@ -10,6 +10,7 @@ body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
+    min-height: 100vh;
 }
 
 #box {
