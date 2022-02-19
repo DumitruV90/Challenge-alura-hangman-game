@@ -15,7 +15,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 95vh, 95vh);
+    height: clamp(630px, 92vh, 92vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +148,7 @@ button:hover, button:focus {
 
 footer {
     position: relative;
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
     font-size: 15px;
     text-align: center;

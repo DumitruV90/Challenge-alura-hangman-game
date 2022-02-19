@@ -83,7 +83,6 @@ function jugar() {
     // Para evitar repeticiones de palabras seleccionadas, por cada reintento en el juego un elemento del arregloPalabras es eliminado de acuerdo al número aleatorio
     arregloPalabras.splice(numeroAleatorio, 1);
     
-    
     resultado();
     comentarios();
     render();
