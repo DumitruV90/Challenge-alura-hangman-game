@@ -13,8 +13,8 @@ body {
 }
 
 #box {
-    margin: 25px auto;
-    height: clamp(630px, 90vh, 90vh);
+    margin: 40px auto;
+    height: clamp(630px, 88vh, 88vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +147,7 @@ button:hover, button:focus {
 
 footer {
     position: relative;
+    margin-top: 40px;
     width: 100%;
     font-size: 15px;
     text-align: center;
@@ -200,15 +201,3 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 12px;
     }
 }
-/*
-@media only screen and (max-height: 600px) {
-    #box {
-        height: 170vh;
-    }
-
-    footer {
-        position: relative;
-        font-size: 13px;
-    }
-}
-*/
