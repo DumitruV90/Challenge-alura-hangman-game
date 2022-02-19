@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 91vh, 91vh);
+    height: clamp(630px, 89vh, 89vh);
     display: flex;
     align-items: center;
     justify-content: center;
