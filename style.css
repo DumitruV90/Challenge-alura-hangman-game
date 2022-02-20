@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 91vh, 91vh);
+    height: clamp(630px, 93vh, 93vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +149,7 @@ footer {
     position: relative;
     margin-top: 50px;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
     color: #666;
 }
