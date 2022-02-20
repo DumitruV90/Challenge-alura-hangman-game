@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 93vh, 93vh);
+    height: clamp(630px, 92vh, 92vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -199,7 +199,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
     footer {
-        margin-top: 140px;
+        margin-top: 150px;
         font-size: 13px;
     }
 }
