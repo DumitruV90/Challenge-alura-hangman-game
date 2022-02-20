@@ -10,12 +10,11 @@ body {
     margin: 0 auto;
     background-color: white;
     text-align: center;
-    min-height: 100vh;
 }
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 92vh, 92vh);
+    height: clamp(630px, 91vh, 91vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -150,7 +149,7 @@ footer {
     position: relative;
     margin-top: 50px;
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     color: #666;
 }
