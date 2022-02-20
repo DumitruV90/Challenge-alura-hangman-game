@@ -200,6 +200,9 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
     footer {
+        position: absolute;
+        margin-bottom: 5px;
+        bottom: 0;
         font-size: 12px;
     }
 }
