@@ -1,9 +1,9 @@
-const canvas = document.getElementById("screen");
-const context = canvas.getContext('2d');
+const canvas = document.getElementById("screen"),
+context = canvas.getContext('2d'),
 
-const animacion = () => {
+animacion = () => {
     arregloDibujos[vidas]();
-}
+};
 
 function render() {
     context.beginPath();
