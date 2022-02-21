@@ -21,7 +21,10 @@ body {
 }
 
 .title {  
-    margin: 5px auto;
+    margin: 0 auto;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    color: #3388BB;
 }
 
 .bar {

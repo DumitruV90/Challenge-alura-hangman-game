@@ -198,7 +198,11 @@ addBtn.addEventListener("click", function () {
     // Únicamente son válidas las letras del alfabeto 
     let regEx = /^[A-Z][A-Z\s]*$/;
 
-    if (!entradaTexto.match(regEx)) {
+    if (inputText.value === "") {
+        inputText.focus();
+        return;
+    }
+    else if (!entradaTexto.match(regEx)) {
         swal("Oops!", "Recuerda escribir únicamente letras del alfabeto", "error");
     } 
     else if (arregloPalabras.includes(entradaTexto)) {
