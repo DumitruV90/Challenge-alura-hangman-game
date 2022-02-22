@@ -5,7 +5,10 @@ underscore = document.getElementById("underscore"),
 clue = document.getElementById("clue"),
 myKeyboard = document.getElementById("keyboard"),
 home = document.getElementById("home"),
-playAgain = document.getElementById("retry");
+playAgain = document.getElementById("retry"),
+alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+    'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 let arregloPalabras = ["APPLE",
     "LIVERPOOL",
@@ -16,9 +19,9 @@ let arregloPalabras = ["APPLE",
     "TESLA",
     "JOHN-LENNON",
     "LINUS-TORVALDS",
-    "JAMES-WEBB"];
+    "JAMES-WEBB"],
 
-let pistas = ["una empresa icónica de Cupertino, California",
+pistas = ["una empresa icónica de Cupertino, California",
     "es un equipo del fútbol inglés muy reconocido ",
     "una saga de videojuegos muy famosa",
     "un valle de la tierra media",
@@ -27,14 +30,10 @@ let pistas = ["una empresa icónica de Cupertino, California",
     "apellido de un legendario inventor",
     "ex integrante de los Beatles",
     "ingeniero de software finlandés",
-    "telescopio lanzado recientemente al espacio"];
-
-const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-    'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
-    'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    "telescopio lanzado recientemente al espacio"],
 
 // Inicialización de variables 
-let letras,
+letras,
 lista,
 numeroAleatorio,
 palabraSeleccionada,
@@ -47,7 +46,6 @@ acierto;
 
 // Estructura del teclado en la pantalla
 startGame.addEventListener("click", function () {
-
     // La división start desaparece de la pantalla
     document.getElementById("start").style.display = "none";
 
@@ -86,7 +84,6 @@ function jugar() {
     resultado();
     comentarios();
     render();
-
     if (arregloPalabras.length === 0) {
         playAgain.disabled = true;
         swal("Oops!", "No hay más palabras secretas disponibles. Es tu último turno :(", "error");
@@ -97,8 +94,7 @@ function revisar() {
     lista.onclick = function () {
         let shot = this.innerHTML;
         this.setAttribute("class", "defuse");
-
-        // Las letras ya seleccionadas dejarán de tener incidencia en la cantidad de vidas del jugador 
+        // Las letras ya seleccionadas no tendrán incidencia en la cantidad de vidas del jugador 
         this.onclick = null;
 
         for (let i = 0; i < palabraSeleccionada.length; i++) {
@@ -108,7 +104,6 @@ function revisar() {
             }
         }
         let check = palabraSeleccionada.indexOf(shot);
-
         // Si no hay coincidencias (-1) entre la letra seleccionada por el usuario y alguna letra de la palabra seleccionada, entonces se resta una vida 
         if (check === -1) {
             vidas -= 1;
@@ -136,7 +131,6 @@ function resultado() {
         } else {
             intento.innerHTML = "_";
         }
-
         arregloIntentos.push(intento);
         underscore.appendChild(acierto);
         acierto.appendChild(intento);
@@ -165,23 +159,21 @@ function comentarios() {
 
 function pista() {
     let mostrarPista = document.getElementById("clue");
-
+    
     // La pista es seleccionada de acuerdo al valor del número aleatorio. La posición o índice de cada pista y elemento del arregloPalabras deben coincidir. 
     let indicePistas = pistas[numeroAleatorio];
-    
+
     // Si el índice de pistas es indefinido es porque la palabra seleccionada corresponde a la ingresada por el usuario
     if (indicePistas === undefined) {
         mostrarPista.innerHTML = `Pista: Ya no es un secreto para ti`;
     } else {
         mostrarPista.innerHTML = `Pista: ${indicePistas}`;
     } 
-
     // Para evitar repeticiones de pistas seleccionadas, por cada reintento en el juego un elemento del arreglo pistas es eliminado de acuerdo al número aleatorio
     pistas.splice(numeroAleatorio, 1);
 }
 
 inputText.addEventListener("keypress", function (event) {
-
     // Si el usuario presiona la tecla 'enter' la función en el botón 'agregar' es ejecutada
     if (event.key === "Enter") {
         // La acción por defecto es cancelada, si es necesario
@@ -191,7 +183,6 @@ inputText.addEventListener("keypress", function (event) {
 });
 
 addBtn.addEventListener("click", function () {
-
     // A la nueva palabra agregada por el jugador se le retiran los acentos y es covertida a mayúsculas
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
