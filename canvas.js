@@ -5,10 +5,13 @@ animacion = () => {
     arregloDibujos[vidas]();
 };
 
-function render() {
+function render(x, y, lineX, lineY) {
     context.beginPath();
     context.strokeStyle = "black";
     context.lineWidth = 2;
+    context.moveTo(x, y);
+    context.lineTo(lineX, lineY);
+    context.stroke(); 
 }
 
 function dibujarCirculo() {
@@ -17,26 +20,20 @@ function dibujarCirculo() {
     context.stroke();
 }
 
-function dibujar(x, y, lineX, lineY) {
-    context.moveTo(x, y);
-    context.lineTo(lineX, lineY);
-    context.stroke(); 
-}
-
 /* Los elementos del arregloDibujos son llamados en la función animación dependiendo del número de vidas del jugador. 
 Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) que es dibujada en el canvas como la primera línea horizontal
 ...Y así sucesivamente 
 */
 
 const arregloDibujos = [
-    piernaDerecha = () => dibujar(150, 90, 127, 110),
-    piernaIzquierda = () => dibujar(150, 90, 173, 110),
-    brazoDerecho = () => dibujar(150, 52, 130, 70),
-    brazoIzquierdo = () => dibujar(150, 52, 170, 70),
-    cuerpo = () => dibujar(150, 47, 150, 90),
+    piernaDerecha = () => render(150, 90, 127, 110),
+    piernaIzquierda = () => render(150, 90, 173, 110),
+    brazoDerecho = () => render(150, 52, 130, 70),
+    brazoIzquierdo = () => render(150, 52, 170, 70),
+    cuerpo = () => render(150, 47, 150, 90),
     dibujarCirculo,
-    cuartaLinea = () => dibujar(150, 0, 150, 20),
-    terceraLinea = () => dibujar(60, 0, 150, 0),
-    segundaLinea = () => dibujar(60, 0, 60, 200),
-    primeraLinea = () => dibujar(50, 150, 250, 150)    
+    cuartaLinea = () => render(150, 0, 150, 20),
+    terceraLinea = () => render(60, 0, 150, 0),
+    segundaLinea = () => render(60, 0, 60, 200),
+    primeraLinea = () => render(50, 150, 250, 150)    
 ]; 

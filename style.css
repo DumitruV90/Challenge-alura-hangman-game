@@ -191,7 +191,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 350px) and (orientation: landscape) {
     .bar, canvas {
         width: 90vw;
     }
@@ -206,3 +206,4 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 13px;
     }
 }
+
