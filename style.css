@@ -192,8 +192,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 }
 
 @media only screen and (max-width: 350px) {
-    .bar, canvas {
+    .bar {
         width: 90vw;
+    }
+
+    canvas {
+        width: 80vw;
     }
 
     #lives, #clue {
@@ -209,13 +213,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
 @media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
     #box {
-        display: flex;
         align-items: flex-start;
         justify-content: center;
     }
 
     footer {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
 
