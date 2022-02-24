@@ -202,7 +202,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 
     footer {
-        margin-top: 158px;
+        margin-top: 150px;
         font-size: 13px;
     }
 }
@@ -210,14 +210,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 @media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
     #box {
         display: flex;
+        align-items: flex-start;
         justify-content: center;
     }
 
     footer {
-        position: absolute;
-        margin-bottom: 5px;
-        bottom: 0;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
