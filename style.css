@@ -167,7 +167,7 @@ footer a {
 
 footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     .bar {
         width: 350px;
     }
@@ -207,7 +207,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media only screen and (max-height: 400px) {
+@media only screen and (orientation:landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
+    #box {
+        display: flex;
+        justify-content: center;
+    }
+
     footer {
         font-size: 13px;
     }
