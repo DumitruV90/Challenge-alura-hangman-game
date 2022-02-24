@@ -5,6 +5,15 @@ animacion = () => {
     arregloDibujos[vidas]();
 };
 
+// Canvas más nítido
+canvas.width = 660;
+canvas.height = 380;
+canvas.style.width = "330px";
+canvas.style.height = "190px";
+
+context.scale(2, 2);
+
+// Coordenadas y características del dibujo
 function render(x, y, lineX, lineY) {
     context.beginPath();
     context.strokeStyle = "black";
@@ -35,5 +44,5 @@ const arregloDibujos = [
     cuartaLinea = () => render(150, 0, 150, 20),
     terceraLinea = () => render(60, 0, 150, 0),
     segundaLinea = () => render(60, 0, 60, 200),
-    primeraLinea = () => render(50, 150, 250, 150)    
+    primeraLinea = () => render(50, 189, 250, 189)    
 ]; 
