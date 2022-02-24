@@ -207,13 +207,16 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media only screen and (orientation:landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
     #box {
         display: flex;
         justify-content: center;
     }
 
     footer {
+        position: absolute;
+        margin-bottom: 5px;
+        bottom: 0;
         font-size: 13px;
     }
 }
