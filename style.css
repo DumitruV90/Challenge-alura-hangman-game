@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 91vh, 91vh);
+    height: clamp(630px, 92vh, 92vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -201,6 +201,11 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     #lives, #clue {
         width: 90vw;
         font-size: 21px;
+    }
+
+    #my-word li {
+        padding: 0 4px;
+        font-size: 1.3em;
     }
 
     footer {
