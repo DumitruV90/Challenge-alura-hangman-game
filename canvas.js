@@ -8,8 +8,7 @@ animacion = () => {
 // Canvas más nítido
 canvas.width = 660;
 canvas.height = 380;
-canvas.style.width = "330px";
-canvas.style.height = "190px";
+
 
 context.scale(2, 2);
 
