@@ -207,11 +207,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         padding: 0 4px;
         font-size: 1.1em;
     }
-
-    #alfabeto li {
-        padding: 2px;
-    }
-
+    
     footer {
         margin-top: 150px;
         font-size: 13px;
