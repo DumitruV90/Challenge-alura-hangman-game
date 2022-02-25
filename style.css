@@ -188,6 +188,12 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 1.4em;
     }
 
+    #alfabeto li {
+        margin: 0 8px 8px 0;
+        width: 9%;
+        height: 9%;
+    }
+
     footer {
         font-size: 14px;
     }
