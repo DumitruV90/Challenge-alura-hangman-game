@@ -188,10 +188,6 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
         font-size: 1.4em;
     }
 
-    #alfabeto li {
-        margin: 0 8px 10px 0;
-    }
-
     footer {
         font-size: 14px;
     }
@@ -209,7 +205,11 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
 
     #my-word li {
         padding: 0 4px;
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+
+    #alfabeto li {
+        padding: 2px;
     }
 
     footer {
