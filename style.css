@@ -14,7 +14,7 @@ body {
 
 #box {
     margin: 0 auto;
-    height: clamp(630px, 92vh, 92vh);
+    height: clamp(630px, 91vh, 91vh);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,7 +152,7 @@ button:hover, button:focus {
 
 footer {
     position: relative;
-    margin-top: 50px;
+    margin-top: 55px;
     width: 100%;
     font-size: 15px;
     text-align: center;
@@ -214,7 +214,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media only screen and (orientation: landscape) and (max-device-width: 700px) {
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 700px) {
     #box {
         align-items: flex-start;
     }
