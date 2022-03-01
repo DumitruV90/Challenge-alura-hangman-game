@@ -214,7 +214,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: #00628f; bac
     }
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-width: 800px) {
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (min-device-width: 320px) and (max-device-width: 700px) {
     #box {
         align-items: flex-start;
     }
