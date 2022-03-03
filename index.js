@@ -183,7 +183,7 @@ inputText.addEventListener("keypress", function (event) {
 });
 
 addBtn.addEventListener("click", function () {
-    // A la nueva palabra agregada por el jugador se le retiran los acentos y es covertida a mayúsculas
+    // La nueva palabra agregada por el jugador es normalizada o ajustada, es decir, se le retiran los acentos y es convertida a mayúsculas
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
     // Únicamente son válidas las letras del alfabeto 
