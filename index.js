@@ -189,9 +189,11 @@ addBtn.addEventListener("click", function () {
     }
     else if (!entradaTexto.match(regEx)) {
         swal("Oops!", "Recuerda escribir únicamente letras del alfabeto", "error");
+        inputText.value = "";
     } 
     else if (arregloPalabras.includes(entradaTexto)) {
         swal("Oops!", "La palabra que escribiste estaría repetida. Selecciona otra", "error");
+        inputText.value = "";
     } else {
         // Los espacios en blanco de la nueva palabra son reeemplazados por un guión
         let updateText = entradaTexto.replaceAll(' ', '-');
