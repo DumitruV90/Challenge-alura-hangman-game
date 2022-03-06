@@ -203,8 +203,19 @@ addBtn.addEventListener("click", function () {
         let updateText = entradaTexto.replaceAll(' ', '-');
         arregloPalabras.push(updateText);
         inputText.value = "";
+        snackbar();
     }
 });
+
+// Función para mostrar un mensaje al momento de ingresar una nueva palabra válida
+function snackbar() {
+    let toast = document.getElementById("snackbar");
+    // La clase "show" es adicionada a la división "snackbar"
+    toast.className = "show";
+    
+    // Después de 3 segundos, la clase "show" es removida de la división
+    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+}
 
 home.addEventListener("click", function () {
     location.reload();

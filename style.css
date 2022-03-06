@@ -27,6 +27,15 @@ body {
     color: #3388BB;
 }
 
+label {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .bar {
     margin: 20px auto;
     width: 400px;
@@ -52,6 +61,49 @@ body {
     border: none;
 }
 
+#snackbar {
+    visibility: hidden;
+    min-width: 50px; 
+    height: auto;
+    margin-left: -25px; 
+    background-color: #3388BB; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 7px; 
+    padding: 10px; 
+    position: fixed;
+    z-index: 1; 
+    left: 50%;
+    bottom: 50px; 
+}
+
+#snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+  
+/* Animaciones para desvanecer y restablecer la división "snackbar" */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50px; opacity: 1;}
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 50px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {bottom: 50px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+  
 #play {
     display: none;
 }
