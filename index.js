@@ -48,7 +48,6 @@ acierto;
 startGame.addEventListener("click", function () {
     // La división start desaparece de la pantalla
     document.getElementById("start").style.display = "none";
-
     // La división play pasa de tener la propiedad 'display: none' (ver hoja de estilos CSS) a tener la propiedad 'display: block'. Es decir, ya se puede ver en la pantalla
     document.getElementById("play").style.display = "block";
 
@@ -74,10 +73,8 @@ function jugar() {
     contador = 0;
     espacio = 0;
     numeroAleatorio = Math.floor(Math.random() * arregloPalabras.length);
-
     // La palabra es seleccionada aleatoriamente dentro del arregloPalabras y los espacios son reemplazados con un guión
     palabraSeleccionada = arregloPalabras[numeroAleatorio].replace(/\s/g, "-");
-
     // Para evitar repeticiones de palabras seleccionadas, por cada reintento en el juego un elemento del arregloPalabras es eliminado de acuerdo al número aleatorio
     arregloPalabras.splice(numeroAleatorio, 1);
     
@@ -159,10 +156,8 @@ function comentarios() {
 
 function pista() {
     let mostrarPista = document.getElementById("clue");
-    
     // La pista es seleccionada de acuerdo al valor del número aleatorio. La posición o índice de cada pista y elemento del arregloPalabras deben coincidir. 
     let indicePistas = pistas[numeroAleatorio];
-
     // Si el índice de pistas es indefinido es porque la palabra seleccionada corresponde a la ingresada por el usuario
     if (indicePistas === undefined) {
         mostrarPista.innerHTML = `Pista: Ya no es un secreto para ti`;
@@ -185,7 +180,6 @@ inputText.addEventListener("keypress", function (event) {
 addBtn.addEventListener("click", function () {
     // La nueva palabra agregada por el jugador es normalizada o ajustada, es decir, se le retiran los acentos y es convertida a mayúsculas
     let entradaTexto = inputText.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
-
     // Únicamente son válidas las letras del alfabeto 
     let regEx = /^[A-Z][A-Z\s]*$/;
 
@@ -210,9 +204,8 @@ addBtn.addEventListener("click", function () {
 // Función para mostrar un mensaje al momento de ingresar una nueva palabra válida
 function snackbar() {
     let toast = document.getElementById("snackbar");
-    // La clase "show" es adicionada a la división "snackbar"
+    // La clase "show" es agregada a la división "snackbar"
     toast.className = "show";
-    
     // Después de 3 segundos, la clase "show" es removida de la división
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
 }
