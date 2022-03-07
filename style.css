@@ -61,25 +61,20 @@ label {
     border: none;
 }
 
-#snackbar {
+#check-mark {
     visibility: hidden;
     margin: 10px auto;
-    padding: 10px;
-    width: 150px;
     color: #3388BB;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 25px;
-    border-radius: 7px;  
-    z-index: 1; 
+    font-size: 30px;   
 }
 
-#snackbar.show {
+#check-mark.show {
     visibility: visible; 
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
   
-/* Animaciones para desvanecer y restablecer la división "snackbar" */
+/* Animaciones para desvanecer y restablecer la división "check-mark" */
 @-webkit-keyframes fadein {
     from {opacity: 0;}
     to {opacity: 1;}

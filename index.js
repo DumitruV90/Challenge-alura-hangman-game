@@ -196,15 +196,15 @@ addBtn.addEventListener("click", function () {
         // Los espacios en blanco de la nueva palabra son reeemplazados por un guión
         let updateText = entradaTexto.replaceAll(' ', '-');
         arregloPalabras.push(updateText);
-        snackbar();
+        checkMark();
     }
     inputText.value = "";
 });
 
-// Función para mostrar un mensaje al momento de ingresar una nueva palabra válida
-function snackbar() {
-    let toast = document.getElementById("snackbar");
-    // La clase "show" es agregada a la división "snackbar"
+// Función para mostrar un símbolo al momento de ingresar una nueva palabra válida
+function checkMark() {
+    let toast = document.getElementById("check-mark");
+    // La clase "show" es agregada a la división "check-mark"
     toast.className = "show";
     // Después de 3 segundos, la clase "show" es removida de la división
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
