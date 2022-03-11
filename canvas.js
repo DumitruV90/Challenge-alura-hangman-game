@@ -22,7 +22,7 @@ function render(x, y, lineX, lineY) {
 
 function dibujarCirculo() {
     context.beginPath();
-    context.arc(150, 34, 13, 0, Math.PI * 2);
+    context.arc(155, 34, 13, 0, Math.PI * 2);
     context.stroke();
 }
 
@@ -32,14 +32,14 @@ Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) qu
 */
 
 const arregloDibujos = [
-    piernaDerecha = () => render(150, 90, 127, 110),
-    piernaIzquierda = () => render(150, 90, 173, 110),
-    brazoDerecho = () => render(150, 52, 130, 70),
-    brazoIzquierdo = () => render(150, 52, 170, 70),
-    cuerpo = () => render(150, 47, 150, 90),
+    piernaDerecha = () => render(155, 90, 132, 110),
+    piernaIzquierda = () => render(155, 90, 178, 110),
+    brazoDerecho = () => render(155, 52, 135, 70),
+    brazoIzquierdo = () => render(155, 52, 175, 70),
+    cuerpo = () => render(155, 47, 155, 90),
     dibujarCirculo,
-    cuartaLinea = () => render(150, 0, 150, 20),
-    terceraLinea = () => render(80, 0, 150, 0),
-    segundaLinea = () => render(80, 0, 80, 200),
-    primeraLinea = () => render(70, 189, 250, 189)    
+    cuartaLinea = () => render(155, 0, 155, 20),
+    terceraLinea = () => render(85, 0, 155, 0),
+    segundaLinea = () => render(85, 0, 85, 200),
+    primeraLinea = () => render(75, 189, 255, 189)    
 ]; 
