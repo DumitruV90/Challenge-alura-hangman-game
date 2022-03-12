@@ -41,5 +41,5 @@ const arregloDibujos = [
     cuartaLinea = () => render(155, 0, 155, 20),
     terceraLinea = () => render(85, 0, 155, 0),
     segundaLinea = () => render(85, 0, 85, 200),
-    primeraLinea = () => render(75, 189, 255, 189)    
+    primeraLinea = () => render(30, 189, 300, 189)    
 ]; 
