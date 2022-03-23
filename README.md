@@ -1,4 +1,5 @@
 Este repositorio hace parte del segundo desafío del programa Oracle Next Education (ONE) desarrollado por Alura Latam. 
+
 Demo: https://dumitruv90.github.io/Challenge-alura-hangman-game/
 
 El desafío consiste en desarrollar un juego del ahorcado. 
