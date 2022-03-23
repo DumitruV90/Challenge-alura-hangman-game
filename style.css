@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-family: 'Shadows Into Light', cursive;
+    --primary-color: #3388BB;
+    --shadow-color: #dcdcdc;
+}
+
 body {
     margin: 0 auto;
     background-color: white;
@@ -22,9 +28,9 @@ body {
 
 .title {  
     margin: 0 auto;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: var(--font-family);
     font-size: 40px;
-    color: #3388BB;
+    color: var(--primary-color);
 }
 
 label {
@@ -40,15 +46,15 @@ label {
     margin: 20px auto;
     width: 400px;
     border-radius: 30px;
-    border: 1px solid #dcdcdc;
+    border: 1px solid var(--shadow-color);
 }
 
 .bar:hover {
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    box-shadow: 1px 1px 8px 1px var(--shadow-color);
 }
   
 .bar:focus-within {
-    box-shadow: 2px 5px 15px #dcdcdc;
+    box-shadow: 2px 5px 15px var(--shadow-color);
     outline: none;
 }
 
@@ -64,7 +70,7 @@ label {
 #check-mark {
     visibility: hidden;
     margin: 10px auto;
-    color: #3388BB;
+    color: var(--primary-color);
     font-size: 30px;   
 }
 
@@ -101,7 +107,7 @@ label {
 
 #lives, #clue {
     margin: 10px auto;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: var(--font-family);
     font-size: 25px;
 }
 
@@ -125,22 +131,22 @@ canvas {
     padding: 15px;
     width: 330px;
     height: 190px;
-    box-shadow: 2px 5px 15px #dcdcdc;
+    box-shadow: 2px 5px 15px var(--shadow-color);
 }
 
 button {
     background-color: white;
     padding: 10px 20px;
     margin: 5px 5px;
-    color: #3388BB;
+    color: var(--primary-color);
     font-size: 15px;
-    border: 2px solid #3388BB;
+    border: 2px solid var(--primary-color);
     border-radius: 7px; 
     cursor: pointer;
 }
 
 button:hover, button:focus {
-    background-color: #3388BB;
+    background-color: var(--primary-color);
     padding: 10px 20px;
     color: white;
 }
@@ -169,10 +175,10 @@ button:hover, button:focus {
     width: 10%;
     height: 10%;
     list-style: none;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: var(--font-family);
     font-size: 18px;
     padding: 4px;
-    background-color: #3388BB;
+    background-color: var(--primary-color);
     border-radius: 7px;
     color: white;
     cursor: pointer;
@@ -180,7 +186,7 @@ button:hover, button:focus {
 
 #alfabeto li:hover {
     background-color: white;
-    color: #3388BB;
+    color: var(--primary-color);
 }
 
 .defuse {
@@ -210,7 +216,7 @@ footer a {
     background-color: inherit;
 }
 
-footer a:hover, footer a:active {text-decoration: underline; color: #00628f; background-color: inherit;}
+footer a:hover, footer a:active {text-decoration: underline; color: var(--primary-color); background-color: inherit;}
 
 @media only screen and (max-width: 700px) {
     .bar {
