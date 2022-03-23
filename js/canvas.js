@@ -7,7 +7,7 @@ animacion = () => {
 
 // Canvas más nítido
 canvas.width = 660;
-canvas.height = 380;
+canvas.height = 400;
 context.scale(2, 2);
 
 // Coordenadas y características del dibujo
@@ -32,14 +32,14 @@ Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) qu
 */
 
 const arregloDibujos = [
-    piernaDerecha = () => render(155, 90, 132, 110),
-    piernaIzquierda = () => render(155, 90, 178, 110),
-    brazoDerecho = () => render(155, 52, 135, 70),
-    brazoIzquierdo = () => render(155, 52, 175, 70),
-    cuerpo = () => render(155, 47, 155, 90),
+    piernaDerecha = () => render(155, 80, 135, 110),
+    piernaIzquierda = () => render(155, 80, 176, 110),
+    brazoDerecho = () => render(155, 52, 142, 70),
+    brazoIzquierdo = () => render(155, 52, 168, 70),
+    cuerpo = () => render(155, 47, 155, 80),
     dibujarCirculo,
     cuartaLinea = () => render(155, 0, 155, 20),
-    terceraLinea = () => render(85, 0, 155, 0),
+    terceraLinea = () => render(85, 1, 155, 1),
     segundaLinea = () => render(85, 0, 85, 200),
-    primeraLinea = () => render(30, 189, 300, 189)    
+    primeraLinea = () => render(30, 199, 300, 199)    
 ]; 

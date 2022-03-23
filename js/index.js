@@ -218,7 +218,7 @@ playAgain.addEventListener("click", function () {
     this.blur();
     acierto.parentNode.removeChild(acierto);
     letras.parentNode.removeChild(letras);
-    context.clearRect(0, 0, 330, 190);
+    context.clearRect(0, 0, 330, 200);
 
     // Si el jugador decide volver a jugar reaparecen en la pantalla la pista, la sección de los guiones bajos, y el teclado
     clue.style.display = "block";
