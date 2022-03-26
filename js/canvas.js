@@ -34,8 +34,8 @@ Por ejemplo, 9 vidas corresponden a la posición 9 del arreglo (primeraLinea) qu
 const arregloDibujos = [
     piernaDerecha = () => render(155, 80, 135, 110),
     piernaIzquierda = () => render(155, 80, 176, 110),
-    brazoDerecho = () => render(155, 52, 142, 70),
-    brazoIzquierdo = () => render(155, 52, 168, 70),
+    brazoDerecho = () => render(155, 52, 139, 75),
+    brazoIzquierdo = () => render(155, 52, 171, 75),
     cuerpo = () => render(155, 47, 155, 80),
     dibujarCirculo,
     cuartaLinea = () => render(155, 0, 155, 20),
