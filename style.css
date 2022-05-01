@@ -81,19 +81,10 @@ label {
 }
   
 /* Animaciones para desvanecer y restablecer la división "check-mark" */
-@-webkit-keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-  
+
 @keyframes fadein {
     from {opacity: 0;}
     to {opacity: 1;}
-}
-  
-@-webkit-keyframes fadeout {
-    from {opacity: 1;}
-    to {opacity: 0;}
 }
   
 @keyframes fadeout {
@@ -263,7 +254,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: var(--primar
     }
 }
 
-@media screen and (orientation: landscape) and (hover: none) and (max-device-width: 450px) {
+@media screen and (orientation: landscape) and (hover: none) and (max-width: 450px) {
     footer {
         font-size: 11px;
     }
