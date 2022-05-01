@@ -254,7 +254,7 @@ footer a:hover, footer a:active {text-decoration: underline; color: var(--primar
     }
 }
 
-@media screen and (orientation: landscape) and (hover: none) and (max-width: 450px) {
+@media screen and (orientation: landscape) and (hover: none) and (max-width: 600px) {
     footer {
         font-size: 11px;
     }
