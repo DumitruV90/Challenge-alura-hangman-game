@@ -13,40 +13,42 @@
 }
 
 body {
-    margin: 0 auto;
     background-color: white;
+    margin: 0 auto;
     text-align: center;
 }
 
 #box {
-    margin: 0 auto;
-    height: clamp(630px, 91vh, 91vh);
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+    height: clamp(630px, 91vh, 91vh);
+    margin: 0 auto;
 }
 
 .title {  
-    margin: 0 auto;
+    color: var(--primary-color);
     font-family: var(--font-family);
     font-size: 40px;
-    color: var(--primary-color);
+    margin: 0 auto;
 }
 
+/* Entrada de texto */
+
 label {
-    position: absolute;
+    height: 1px;
     left: -10000px;
+    overflow: hidden;
+    position: absolute;
     top: auto;
     width: 1px;
-    height: 1px;
-    overflow: hidden;
 }
 
 .bar {
+    border: 1px solid var(--shadow-color);
+    border-radius: 30px;
     margin: 20px auto;
     width: 400px;
-    border-radius: 30px;
-    border: 1px solid var(--shadow-color);
 }
 
 .bar:hover {
@@ -59,25 +61,25 @@ label {
 }
 
 #input-text {
-    margin: auto 25px;
-    height: 43px;
-    width: 330px;
-    font-size: 15px;
-    outline: none;
     border: none;
+    font-size: 15px;
+    height: 43px;
+    margin: auto 25px;
+    outline: none;
+    width: 330px;
 }
 
 #check-mark {
-    visibility: hidden;
-    margin: 10px auto;
     color: var(--primary-color);
     font-size: 30px;   
+    margin: 10px auto;
+    visibility: hidden;
 }
 
 #check-mark.show {
-    visibility: visible; 
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    visibility: visible; 
 }
   
 /* Animaciones para desvanecer y restablecer la división "check-mark" */
@@ -97,56 +99,58 @@ label {
 }
 
 #lives, #clue {
-    margin: 10px auto;
     font-family: var(--font-family);
     font-size: 25px;
+    margin: 10px auto;
 }
 
 #my-word {
+    display: block;
     margin-bottom: 10px;
     padding: 0;
-    display: block;
 }
   
 #my-word li {
-    position: relative;
+    display: inline-block;
+    font-size: 1.6em;
+    list-style: none;
     margin: 0;
     padding: 0 10px;
-    display: inline-block;
-    list-style: none;
-    font-size: 1.6em;
+    position: relative;
 }
 
 canvas {
+    box-shadow: 2px 5px 15px var(--shadow-color);
+    height: 200px;
     margin: 13px auto;
     padding: 15px;
     width: 330px;
-    height: 200px;
-    box-shadow: 2px 5px 15px var(--shadow-color);
 }
 
 button {
     background-color: white;
-    padding: 10px 20px;
-    margin: 5px 5px;
-    color: var(--primary-color);
-    font-size: 15px;
     border: 2px solid var(--primary-color);
     border-radius: 7px; 
+    color: var(--primary-color);
     cursor: pointer;
+    font-size: 15px;
+    margin: 5px 5px;
+    padding: 10px 20px;
 }
 
 button:hover, button:focus {
     background-color: var(--primary-color);
-    padding: 10px 20px;
     color: white;
+    padding: 10px 20px;
 }
 
+/* Teclado en la pantalla */
+
 #keyboard {
+    height: 155px;
     margin: 10px auto;
     text-align: center;
     width: 400px;
-    height: 155px;
 }
 
 #alfabeto {
@@ -155,24 +159,24 @@ button:hover, button:focus {
 }
 
 #alfabeto::after {
-    content: "";
     display: table;
     clear: both;
+    content: "";
 }
   
 #alfabeto li {
-    margin: 0 10px 10px 0;
-    float: left;
-    width: 10%;
-    height: 10%;
-    list-style: none;
-    font-family: var(--font-family);
-    font-size: 18px;
-    padding: 4px;
     background-color: var(--primary-color);
     border-radius: 7px;
     color: white;
     cursor: pointer;
+    float: left;
+    font-family: var(--font-family);
+    font-size: 18px;
+    height: 10%;
+    list-style: none;
+    margin: 0 10px 10px 0;
+    padding: 4px;
+    width: 10%;
 }
 
 #alfabeto li:hover {
@@ -181,33 +185,35 @@ button:hover, button:focus {
 }
 
 .defuse {
-    opacity: 0.3;
     cursor: default;
+    opacity: 0.3;
 }
 
 #game-options {
-    margin-top: 10px;
     display: inline-block;
+    margin-top: 10px;
 }
 
+/* Pie de página */
+
 footer {
-    position: relative;
-    margin-top: 55px;
-    width: 100%;
-    font-size: 15px;
-    text-align: center;
     color: #666;
+    font-size: 15px;
+    margin-top: 55px;
+    position: relative;
+    text-align: center;
+    width: 100%;  
 }
 
 footer a {
-    font: Verdana, Arial, Helvetica, sans-serif;
+    background-color: inherit;
     color: #707070;
+    font: Verdana, Arial, Helvetica, sans-serif;
     letter-spacing: -1px;
     text-decoration: underline;
-    background-color: inherit;
 }
 
-footer a:hover, footer a:active {text-decoration: underline; color: var(--primary-color); background-color: inherit;}
+footer a:hover, footer a:active {background-color: inherit; color: var(--primary-color); text-decoration: underline;}
 
 @media screen and (orientation: portrait) and (max-width: 700px) {
     .bar {
@@ -224,12 +230,8 @@ footer a:hover, footer a:active {text-decoration: underline; color: var(--primar
     }
 
     #my-word li {
-        padding: 0 5px;
         font-size: 1.4em;
-    }
-
-    footer {
-        font-size: 13px;
+        padding: 0 5px;
     }
 }
 
@@ -239,18 +241,18 @@ footer a:hover, footer a:active {text-decoration: underline; color: var(--primar
     }
 
     #lives, #clue {
-        width: 90vw;
         font-size: 21px;
+        width: 90vw;
     }
 
     #my-word li {
-        padding: 0 4px;
         font-size: 1.1em;
+        padding: 0 4px;
     }
     
     footer {
-        margin-top: 150px;
         font-size: 13px;
+        margin-top: 150px;
     }
 }
 
