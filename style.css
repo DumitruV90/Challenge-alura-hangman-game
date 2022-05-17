@@ -233,6 +233,10 @@ footer a:hover, footer a:active {background-color: inherit; color: var(--primary
         font-size: 1.4em;
         padding: 0 5px;
     }
+
+    footer {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 350px) {
