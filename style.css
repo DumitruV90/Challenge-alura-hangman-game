@@ -216,6 +216,10 @@ footer a {
 footer a:hover, footer a:active {background-color: inherit; color: var(--primary-color); text-decoration: underline;}
 
 @media screen and (orientation: portrait) and (max-width: 700px) {
+    .title {
+        font-size: 35px;
+    }
+
     .bar {
         width: 350px;
     }
