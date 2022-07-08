@@ -32,7 +32,7 @@ pistas = ["una empresa icónica de Cupertino, California",
     "ingeniero de software finlandés",
     "telescopio lanzado recientemente al espacio"],
 
-// Inicialización de variables 
+// Declaración de variables 
 letras,
 lista,
 numeroAleatorio,
